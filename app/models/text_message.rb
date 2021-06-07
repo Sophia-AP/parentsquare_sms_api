@@ -2,7 +2,7 @@
 #
 # Table name: text_messages
 #
-#  id                  :integer          not null, primary key
+#  id                  :bigint           not null, primary key
 #  callback_url        :string
 #  from_number         :string
 #  message             :text             not null
