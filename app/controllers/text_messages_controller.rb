@@ -3,6 +3,12 @@ class TextMessagesController < ApplicationController
   include ActionController::Rendering
   include ActionController::MimeResponds
 
+  def index
+    @text_messages = TextMessage.all.order(created_at: :desc)
+
+    render :index
+  end
+
   # http://localhost:3000/text_messages/new
   def new
     @sms = TextMessage.new

@@ -1,0 +1,25 @@
+%div.container
+  %h1 Text Messages
+
+  %a=link_to('New SMS', controller.url_for(controller: :text_messages, action: :new))
+
+  %table.text-messages-table
+    %thead
+      %tr
+        %th Provider Status
+        %th To
+        %th From
+        %th Message
+        %th Provider ID
+        %th Provider Message ID
+        %th Created At
+
+    - @text_messages.each do |text|
+      %tr
+        %td=text.provider_status
+        %td=text.to_number
+        %td=text.from_number
+        %td=text.message
+        %td=text.provider_id
+        %td=text.provider_message_id
+        %td=text.created_at.strftime('%-m/%-d/%y %-H:%M %P')
