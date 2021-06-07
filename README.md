@@ -1,8 +1,8 @@
-# README
+# ParentSquare Texting Service Interview Project
 
-ParentSquare Texting Service Interview Project
+The ParentSquare SMS API is hosted at https://parentsquare-sms-api.herokuapp.com/
 
-The ParentSquare SMS API app runs on Ruby 2.6.7 and Rails 6.1.3.2
+The app runs on Ruby 2.6.7 and Rails 6.1.3.2
 
 ## Table of Contents
 

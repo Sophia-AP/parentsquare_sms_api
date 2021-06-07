@@ -15,7 +15,12 @@
 #
 
 class TextMessage < ApplicationRecord
-  CALLBACK_URL = 'http://681506cc3dfd.ngrok.io/text_messages/delivery_status'.freeze
+  CALLBACK_URL =
+    if Rails.env.production?
+      'https://parentsquare-sms-api.herokuapp.com/text_messages/delivery_status'
+    else
+      'http://681506cc3dfd.ngrok.io/text_messages/delivery_status'
+    end.freeze
 
   PROVIDERS = {
     1 => 'https://jo3kcwlvke.execute-api.us-west-2.amazonaws.com/dev/provider1',
