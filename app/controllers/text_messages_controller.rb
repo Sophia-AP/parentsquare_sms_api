@@ -12,7 +12,15 @@ class TextMessagesController < ApplicationController
 
   def create
     @sms = TextMessage.create!(text_message_params)
-    # TODO: Add SMS service.
+    sms_service = SmsService.new(@sms.id).transmit!
+
+    respond_to do |format|
+      if @sms.reload.provider_message_id
+        format.json { render plain: { sms: @sms, success: true }.to_json, status: 200, content_type: 'application/json' }
+      else
+        format.json { render plain: { sms: @sms, success: false }.to_json, content_type: 'application/json' }
+      end
+    end
   end
 
   # POST /text_messages/delivery_status(.:format)

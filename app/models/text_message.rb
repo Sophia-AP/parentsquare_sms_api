@@ -17,6 +17,11 @@
 class TextMessage < ApplicationRecord
   CALLBACK_URL = 'http://681506cc3dfd.ngrok.io/text_messages/delivery_status'.freeze
 
+  PROVIDERS = {
+    1 => 'https://jo3kcwlvke.execute-api.us-west-2.amazonaws.com/dev/provider1',
+    2 => 'https://jo3kcwlvke.execute-api.us-west-2.amazonaws.com/dev/provider2'
+  }.freeze
+
   after_initialize :set_callback_url
 
   private
