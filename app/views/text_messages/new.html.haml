@@ -1,0 +1,7 @@
+%div.container
+  %h1 New Text Message
+
+  .flash-messages
+
+  = form_with(model: @sms, format: :js, id: :new_text_message, url: controller.url_for(@sms), action: :create, method: :post, local: false, data: { type: :json }) do |form|
+    = render(partial: 'form' , locals: { f: form })

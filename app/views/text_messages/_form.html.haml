@@ -1,0 +1,14 @@
+%form{ action: :submit_text_message, method: :post }
+  .row
+    .col-md-12
+      = f.label :from_number, required: false, label: 'Sender Phone Number (optional)'
+      = f.telephone_field :from_number, required: false
+
+      = f.label :to_number, required: true, label: 'Receiver Phone Number'
+      = f.telephone_field :to_number, required: true
+
+      = f.label :message, required: true, label: 'Message'
+      = f.text_field :message, required: true
+  .row
+    .col-md-12
+      = f.submit 'Send SMS'
