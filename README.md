@@ -8,6 +8,7 @@ The app runs on Ruby 2.6.7 and Rails 6.1.3.2
 
 * [Install Requirements](#install-requirements)
 * [Running the app in Development](#running-the-app-in-development)
+* [Engaging with the API](#engaging-with-the-api)
 
 ## Install requirements
 
@@ -83,3 +84,13 @@ The app should now be running.
 You can create and send messages in the browser by hitting http://localhost:3000/text_messages/new
 
 Alternatively, you can POST messages to the JSON API directly at http://localhost:3000/text_messages/create.json
+
+## Engaging with the API
+
+You can interact with the application by POST-ing directly to http://localhost:3000/text_messages or  https://parentsquare-sms-api.herokuapp.com/text_messages
+
+or
+
+through a web browser by hitting http://localhost:3000/ or https://parentsquare-sms-api.herokuapp.com/ where you will see all text messages that have been sent.
+
+If you'd like to send a new message, simply click the "New SMS" link and submit the form. The API response is in JSON format. To view the status of the webhook response, go back to the index page.
