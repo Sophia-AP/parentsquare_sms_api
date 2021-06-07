@@ -1,6 +1,6 @@
 # ParentSquare Texting Service Interview Project
 
-The ParentSquare SMS API is hosted at https://parentsquare-sms-api.herokuapp.com/
+The ParentSquare SMS API is hosted at [parentsquare-sms-api.herokuapp.com](https://parentsquare-sms-api.herokuapp.com/)
 
 The app runs on Ruby 2.6.7 and Rails 6.1.3.2
 
@@ -62,7 +62,8 @@ or
 $ rbenv local 2.6.7
 ```
 
-Open a port to accept incoming webhook requests locally. Then update the TextMessage model's CALLBACK_URL in app/models/text_message.rb, line 20.
+Open a port to accept incoming webhook requests locally.
+Then update the TextMessage model's CALLBACK_URL in [app/models/text_message.rb](https://github.com/Sophia-AP/parentsquare_sms_api/blob/acd853c96ce82bf6e4f543a7a598f9bbb88dee13/app/models/text_message.rb#L22), line 22.
 
 ```
 $ ngrok http 3000
